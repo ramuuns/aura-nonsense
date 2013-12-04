@@ -9,7 +9,7 @@
 			background-position: center top;
 			background-size: cover;
 			height:100vh;
-			width: 100vw;
+			width: 100%;
 			padding:0px;
 			margin:0px;
 			font-family: Helvetica, Arial, sans-serif; 
@@ -47,7 +47,7 @@
 			position: fixed;
 			top:0px;
 			left:0px;
-			width: 100vw;
+			width: 100%;
 			margin: 0px;
 			padding:0px;
 		}
@@ -56,6 +56,7 @@
 			background-color: white;
 			width: 85%;
 			margin:0px auto;
+			box-shadow: 0px 3px 3px #999;
 		}
 
 		#content {
@@ -71,15 +72,22 @@
 			-moz-box-sizing:border-box;
 			-webkit-box-sizing:border-box;
 			box-sizing:border-box;
-			background-color: rgba(255,255,255, .7);
+			/*background-color: rgba(255,255,255, .7);*/
+			background-color: white;
 			padding:1em;
-			height:40ex;
+			/*height:350px;*/
 			transition: background-color 0.4s ease-in;
 			margin-bottom:10px;
+			text-shadow:1px 1px 2px white;
+		}
+
+		#content article.news-item:nth-of-type(3n+1) {
+			clear:left;
 		}
 
 		#content article.news-item:hover {
 			background-color: rgba(255,255,255, 1);
+			box-shadow: 0px 0px 15px #999;
 		}
 
 		#content article.news-item a {
@@ -87,7 +95,7 @@
 		}
 
 		#content article.news-item a img {
-			width: 100%;
+			max-width: 100%;
 		}
 
 		.main-menu {
@@ -119,6 +127,34 @@
 		.main-menu li.active {
 			border-bottom: 2px solid rgb(255, 145, 0);
 		}
+
+		#logo {
+			padding-left:1em;
+		}
+
+		@media screen and (max-width: 800px) {
+			#content article.news-item {
+				width: 49%;
+			}
+
+			nav.main-menu {
+				display: none;
+			}
+
+			#content article.news-item:nth-of-type(3n+1) {
+				clear:none;
+			}
+
+			#content article.news-item:nth-of-type(2n+1) {
+				clear:left;
+			}
+		}
+
+		@media screen and (max-width: 600px) {
+			#content article.news-item {
+				width: 100%;
+			}
+		}
 		</style>
 	</head>
 	<body>
@@ -129,7 +165,7 @@
 				<nav class="main-menu">
 					<ul>
 						<li class="active"><a href="#">Ziņas</a></li>
-						<li><a href="#">Ieraksti</a></li>
+						<li><a href="#">Skaties un klausies</a></li>
 						<li><a href="#">Par kori</a></li>
 						<li><a href="#">Dalībniekiem</a></li>
 					</ul>
@@ -149,11 +185,9 @@
 					<h1>Aura tas nav koris - tā ir ģimene</h1>
 					</a>
 				</article>
-				<article class="news-item">
-					<a href="#">
-					<img src="http://koris-aura.lv/large/145.jpg">
-					<h1>Aura tas nav koris - tā ir ģimene</h1>
-					</a>
+				<article class="news-item twitter">
+					<a class="twitter-timeline" height="318" data-chrome="noborders transparent nofooter" href="https://twitter.com/KorisAura" data-widget-id="408274571918192640">@KorisAura čivina</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 				</article>
 				<article class="news-item sponsors">
 					<h2>Atbalstītāji:</h2>
