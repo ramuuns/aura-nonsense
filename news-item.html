@@ -21,19 +21,11 @@
 				</div>
 			</header>
 			<div id="content">
-				<div id="current-item-cont" class="news-item news-item-full disabled"></div>
-				<article class="news-item concert">
-					<h2>Nākamais koncerts</h2>
-					<h1>Sadraudzības koncerts Viļņā</h1>
-					<time datetime="2013-12-06T18:00+0200">Piektdien, 6. decembrī, 18:00</time>
-					<p class="location">Viļņā</p>
-				</article>
-				<article class="news-item">
-					<a href="#">
-					<img src="http://koris-aura.lv/large/145.jpg">
+				<article class="news-item-full">
 					<h1>"Aura" - tas nav koris - tā ir ģimene</h1>
-					</a>
-					<div class="full-only">
+					<div class="article-img">
+						<img src="http://koris-aura.lv/large/145.jpg">
+					</div>
 					<div class="article-text">
 					<p>Kā nu gadījās, kā ne – bet 2008. gada Dziesmusvētku laikā nejauši uztrāpījos uz kora "Aura". Toreiz pirms svētku gājiena blandījos pa Vecrīgu, meklēdams pazīstamas sejas, un te skat – vesels lērums ar tādām. Pastāvēju, padziedāju līdzi (nu vismaz mēģināju) un pavadīju kori gājienā. Šādi sekojot korim, izteicu domu SB, kura tolaik arī darīja aptuveni to pašu, ko es – „klau – a moš, iestājamies tajā korī?” Sacīts – darīts. Augustā, kad notika kārtējā uzņemšana bijām klāt, kā likti un tikām arīdzan uzņemti.</p>
 <p>
@@ -46,58 +38,10 @@ Bieži vien sevi nācās pieķert arī ar kori nesaistītos pasākumos atrodotie
 <p>Paldies tev, "Aura" – Tu vienmēr būsi mana ģimene, lai kur un cik tālu no jums es fiziski atrastos.</p>
 					</div>
 					<p class="author">Ramūns Usovs</p>
-					</div>
-				</article>
-				<article class="news-item twitter">
-					<a class="twitter-timeline" height="318" data-chrome="noborders transparent nofooter" href="https://twitter.com/KorisAura" data-widget-id="408274571918192640">@KorisAura čivina</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-				</article>
-				<article class="news-item sponsors">
-					<h2>Atbalstītāji:</h2>
-					<a href="#" target="_blank"><img src="http://koris-aura.lv/medicinaspreces.jpg"></a>
-					<a href="#" target="_blank"><img src="http://koris-aura.lv/images/lusp.jpg"></a>
-				</article>
-				<article class="news-item">
-					<a href="#">
-					<img src="http://koris-aura.lv/large/145.jpg">
-					<h1>Aura tas nav koris - tā ir ģimene</h1>
-					</a>
-				</article>
-				<article class="news-item">
-					<a href="#">
-					<img src="http://koris-aura.lv/large/145.jpg">
-					<h1>Aura tas nav koris - tā ir ģimene</h1>
-					</a>
-				</article>
-				<article class="news-item">
-					<a href="#">
-					<img src="http://koris-aura.lv/large/145.jpg">
-					<h1>Aura tas nav koris - tā ir ģimene</h1>
-					</a>
-				</article>
-				<article class="news-item">
-					<a href="#">
-					<img src="http://koris-aura.lv/large/145.jpg">
-					<h1>Aura tas nav koris - tā ir ģimene</h1>
-					</a>
 				</article>
 			</div>
 			<footer>
 			</footer>
 		</div>
 	</body>
-	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<script type="text/javascript">
-		$(function(){
-			$('.news-item a').on('click', function(){
-				//$(this).closest('.news-item');.toggleClass('full');
-				$('#current-item-cont').removeClass("disabled").addClass("full").html($(this).html() + $(this).next().html());
-				var target = $('#current-item-cont');
-				$('html, body').stop().animate({
-					scrollTop: target.offset().top
-				}, 400);
-				return false;
-			});
-		});
-	</script>
 </html>
